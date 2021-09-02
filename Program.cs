@@ -8,9 +8,21 @@ namespace HeicToJpg
     {
         static void Main(string[] args)
         {
-            var image = new MagickImage("IMG_6147.HEIC");
-                image.Format = MagickFormat.Jpg;
-                image.Write("test.jpg");
+            foreach (string fileName in Directory.GetFiles("./input/"))
+            {
+                Console.WriteLine(Path.GetFileName(fileName));
+                string ext = Path.GetExtension(fileName);
+                Console.WriteLine(ext);
+                if (ext == ".HEIC")
+                {
+                    using (var image = new MagickImage(fileName))
+                    {
+                        image.Format = MagickFormat.Jpg;
+                        image.Write($"./output/{Path.GetFileNameWithoutExtension(fileName)}.jpg");
+                    }
+                }
+                
+            }
         }
     }
 }
