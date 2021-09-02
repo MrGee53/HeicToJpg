@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using ImageMagick;
 
 namespace HeicToJpg
 {
@@ -6,7 +8,9 @@ namespace HeicToJpg
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var image = new MagickImage("IMG_6147.HEIC");
+                image.Format = MagickFormat.Jpg;
+                image.Write("test.jpg");
         }
     }
 }

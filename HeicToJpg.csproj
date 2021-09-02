@@ -5,4 +5,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="8.2.1" />
+  </ItemGroup>
+
+
 </Project>

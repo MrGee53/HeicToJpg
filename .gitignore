@@ -446,3 +446,9 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+## HEIC test files
+*.HEIC
+
+## JPG test files
+*.JPG
