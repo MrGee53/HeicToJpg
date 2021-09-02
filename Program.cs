@@ -10,18 +10,20 @@ namespace HeicToJpg
         {
             foreach (string fileName in Directory.GetFiles("./input/"))
             {
-                Console.WriteLine(Path.GetFileName(fileName));
                 string ext = Path.GetExtension(fileName);
-                Console.WriteLine(ext);
                 if (ext == ".HEIC")
                 {
+                    Console.WriteLine($"Found {Path.GetFileName(fileName)}. Converting to JPG...");
                     using (var image = new MagickImage(fileName))
                     {
                         image.Format = MagickFormat.Jpg;
                         image.Write($"./output/{Path.GetFileNameWithoutExtension(fileName)}.jpg");
                     }
                 }
-                
+                else
+                {
+                    Console.WriteLine($"{Path.GetFileName(fileName)} is not .HEIC... Skipping");
+                }
             }
         }
     }
