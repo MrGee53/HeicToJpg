@@ -4,10 +4,19 @@ This is a simple program I wrote to convert HEIC photos to JPG.
 ## Overview
 I wrote this program because Windows expects me to pay to view HEIC photos, and I didn't want to do that.
 It is writen using .NET and C# and uses Magick.NET to convert the images to JPG format.
-I have only test this program on Windows
+I have only tested this program on Windows 10, but may work on other systems.
 
 ## Usage
-**You will need .NET 5.0 installed to run this program**
+**Using the Windows 10 release**
+- Download the *HeicToJpg.zip* from [releases](https://github.com/MrGee53/HeicToJpg/releases)
+- Unzip the file
+- Open the folder you just extracted
+- Put your *.HEIC* photos into the *input* folder
+- Run *HeicToJpg.exe*
+- All formated images will be in the *output* folder
+
+
+**Using [.NET](https://dotnet.microsoft.com/) 5.0**
 - Clone this repository
 - Add all your .HEIC photos to the *input* folder
 - run the command *dotnet run*
