@@ -11,7 +11,7 @@ namespace HeicToJpg
             foreach (string fileName in Directory.GetFiles("./input/"))
             {
                 string ext = Path.GetExtension(fileName);
-                if (ext == ".HEIC")
+                if (ext == ".HEIC" || ext == ".heic")
                 {
                     Console.WriteLine($"Found {Path.GetFileName(fileName)}. Converting to JPG...");
                     using (var image = new MagickImage(fileName))
