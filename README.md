@@ -16,7 +16,7 @@ I have only tested this program on Windows 10, but may work on other systems.
 - All formated images will be in the *output* folder
 
 
-**Using [.NET](https://dotnet.microsoft.com/) 5.0**
+**Using [.NET](https://dotnet.microsoft.com/) 6.0**
 - Clone this repository
 - Add all your .HEIC photos to the *input* folder
 - run the command *dotnet run*
